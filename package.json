@@ -1,0 +1,20 @@
+{
+  "name": "sourcepool",
+  "version": "1.0.0",
+  "description": "TTRPG content management system, ready for you to self-host.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+	"dev": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0"
+  }
+}
