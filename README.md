@@ -13,9 +13,9 @@ This system just provides a heap of tools to make that management easier.
 
 ## Repositories
 
-- [Sourcepool]() - an overview of the system.
-- [Sourcepool-Server]() - the back-end server of the system.
-- [Sourcepool-Client-Web]() - a front-end interface of the system, used in the web browser.
+- [Sourcepool](https://github.com/BigfootDS/Sourcepool/) - an overview of the system, and the documentation website.
+- [Sourcepool-Server](https://github.com/BigfootDS/Sourcepool-Server) - the back-end server of the system.
+- [Sourcepool-Client-Web]() - (Coming soon!) a front-end interface of the system, used in the web browser.
 
 ## Goals
 
@@ -26,5 +26,7 @@ This system just provides a heap of tools to make that management easier.
 - Sourcepool Server is bundled with a web-based Sourcepool Client
 
 ### Features
+
+(Coming soon!) 
 
 - 
