@@ -11,6 +11,12 @@ This system is like [Jellyfin](https://jellyfin.org/), but for tabletop RPG mana
 The owners of a Sourcepool instance are responsible for their own content management. 
 This system just provides a heap of tools to make that management easier.
 
+## Documentation
+
+Please visit the Sourcepool website for documentation and information:
+
+- [https://bigfootds.github.io/Sourcepool/](https://bigfootds.github.io/Sourcepool/)
+
 ## Repositories
 
 - [Sourcepool](https://github.com/BigfootDS/Sourcepool/) - an overview of the system, and the documentation website.

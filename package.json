@@ -1,15 +1,19 @@
 {
   "name": "sourcepool",
   "version": "1.0.0",
-  "description": "TTRPG content management system, ready for you to self-host.",
-  "main": "index.js",
+  "description": "Documentation website for the open-source TTRPG content management system, ready for you to self-host.",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy --pathprefix '/Sourcepool/'",
 	  "dev": "eleventy --serve"
   },
+  "homepage": "https://bigfootds.github.io/Sourcepool/",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "BigfootDS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigfootDS/Sourcepool.git"
+  },
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
   },

@@ -6,6 +6,6 @@ tags: nav
 
 <div class="landing">
 <h1>{{ title }}</h1>
-<img src="./assets/images/SourcepoolLogo_BlackLines.png" />
-<p>A TTRPG content management system, ready for you to self-host.</p>
+<img src="/assets/images/Sourcepool-Black-Logo.png" />
+<p>An open-source TTRPG content management system, ready for you to self-host.</p>
 </div>
