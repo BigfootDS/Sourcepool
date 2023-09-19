@@ -6,7 +6,6 @@
     "build": "eleventy --pathprefix '/Sourcepool/'",
 	  "dev": "eleventy --serve"
   },
-  "homepage": "https://bigfootds.github.io/Sourcepool/",
   "keywords": [],
   "author": "BigfootDS",
   "repository": {
