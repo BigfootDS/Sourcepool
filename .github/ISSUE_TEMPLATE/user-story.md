@@ -2,7 +2,7 @@
 name: User story
 about: Map out a user story for a Sourcepool feature or function.
 title: 'docs: As a ___, I want to ___, because ___.'
-labels: ''
+labels: user story
 assignees: ''
 
 ---
