@@ -1,0 +1,18 @@
+name: Add user stories to Sourcepool project
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add user story issue to project
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/orgs/BigfootDS/projects/5
+          github-token: ${{ secrets.BIGFOOTDS_PAT }}
+          labeled: user story
