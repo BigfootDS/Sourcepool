@@ -1,5 +1,12 @@
 # Sourcepool
+
 TTRPG content management system, ready for you to self-host.
+
+This repository is for overall documentation and project management.
+
+This website is not intended for you or your players to download and use - just visit the website, and follow steps to get the Sourcepool server and client apps from there.
+
+- [https://bigfootds.github.io/Sourcepool/](https://bigfootds.github.io/Sourcepool/)
 
 ## In a nutshell...
 
