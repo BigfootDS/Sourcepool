@@ -8,6 +8,14 @@ This website is not intended for you or your players to download and use - just 
 
 - [https://bigfootds.github.io/Sourcepool/](https://bigfootds.github.io/Sourcepool/)
 
+## Contributing
+
+To see the to-do list of the Sourcepool ecosystem, please refer to these resources:
+
+- [BigfootDS/Projects/Sourcepool](https://github.com/orgs/BigfootDS/projects/5/views/1)
+
+The GitHub project `Sourcepool` is the primary source of info for task planning, and includes links to the official repositories of the various bits of Sourcepool.
+
 ## In a nutshell...
 
 This system is like [Jellyfin](https://jellyfin.org/), but for tabletop RPG management. 
