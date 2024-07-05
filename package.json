@@ -26,7 +26,8 @@
     "make-ubuntu": "electron-forge make --target @electron-forge/maker-deb",
     "publish": "electron-forge publish",
     "dev:licenseDataGen": "mkdir -p ./out && npx @bigfootds/npm-compliance-helper > ./src/shared/data/compliance.json",
-    "dev:react-devtools": "react-devtools"
+    "dev:react-devtools": "react-devtools",
+    "build:docs": "jsdoc ./src -r -c ./jsdoc.json"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
@@ -50,7 +51,9 @@
     "electron-devtools-installer": "^3.2.0",
     "node-loader": "^2.0.0",
     "react-devtools": "^5.1.0",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc": "^4.0.3"
   },
   "dependencies": {
     "@bigfootds/supercamo": "^0.4.4",

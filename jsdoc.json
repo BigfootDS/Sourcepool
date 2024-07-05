@@ -1,0 +1,64 @@
+{
+	"plugins": ["plugins/markdown"],
+	"markdown": {
+		"idInHeadings": true
+	},
+    "recurseDepth": 10,
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+		"default": {
+			"includeDate": false,
+			"outputSourceFiles": false
+		}
+    },
+	"opts":{
+		"readme":"./docs/homepage.md",
+		"tutorials":"./docs/tutorials/",
+		"template":"node_modules/clean-jsdoc-theme",
+		"theme_opts": {
+			"homepageTitle": "Sourcepool by BigfootDS",
+			"title": "Sourcepool",
+			"menu":[
+				{
+					"title":"Home",
+					"link":".",
+					"class":"navbar-item"
+				},
+				{
+					"title":"Dungeon Master Setup",
+					"link":"./tutorial-01-dungeonmastersetup.html",
+					"class":"navbar-item"
+				},
+				{
+					"title":"Player Setup",
+					"link":"./tutorial-02-playersetup.html",
+					"class":"navbar-item"
+				}
+			],
+			"meta": [
+				{
+				  "name": "author",
+				  "content": "BigfootDS"
+				},
+				{
+				  "name": "description",
+				  "content": "TTRPG content management system, ready for you to self-host."
+				},
+				{
+					"name":"keywords",
+					"content": "dungeons and dragons, dnd, d&d, ttrpg, sourcepool, bigfootds, homebrew"
+				}
+			  ]
+		}
+	}
+}
