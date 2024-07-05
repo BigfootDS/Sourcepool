@@ -1,0 +1,37 @@
+name: Release Alert to Discord
+
+# Not useful unless we replace "secrets.GITHUB_TOKEN" with a custom "secrets.Some_GitHub_PAT"
+# since the default GitHub Token doesn't trigger new workflow events.
+# on:
+#   release:
+#     types: [released]
+
+# Instead, we can specify that we want this action to run when
+# the release/changelog generator action has completed:
+on:
+  workflow_run:
+    workflows: ["Build & Release on PR Merge"]
+    types: [completed]
+
+jobs:
+  push_to_discord:
+    name: Send release to Discord
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo The release data is now being sent to Discord...
+
+    - name: Get Latest Release
+      id: latestrelease
+      uses: pozetroninc/github-action-get-latest-release@v0.7.0
+      with:
+        repository: ${{ github.repository }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+        content: |
+          An update to Sourcepool Server has been released! Please view it here: 
+          https://github.com/BigfootDS/Sourcepool-Server/releases/tag/${{ steps.latestrelease.outputs.release}}

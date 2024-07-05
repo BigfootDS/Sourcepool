@@ -1,0 +1,26 @@
+name: Push Main to Deploy
+
+on: 
+  workflow_dispatch
+# Set up an automated rule if you don't wanna 
+# manually make a deployment.
+# Could be on push to main (eg. when PRs merge)
+# or when tests on main successfully finish. 
+# on:
+#   push:
+#     branches:
+#       - main
+# or when called by another workflow
+
+jobs:
+  sync-branch:
+    name: Update deploy branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: connor-baer/action-sync-branch@main
+        with:
+          branch: deploy
+          token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
