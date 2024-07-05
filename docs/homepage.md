@@ -1,3 +1,26 @@
 # Sourcepool
 
-Pardon our dust!
+Pardon our dust! Big overhaul happening right now.
+
+## What is Sourcepool?
+
+Essentially:
+
+1. Player A has Sourcepool installed on their computer.
+2. Dungeon Master has Sourcepool installed on their computer.
+3. Dungeon Master adds content to their Sourcepool.
+4. Dungeon Master allows other Sourcepool servers (eg. the players' Sourcepools) to connect to their own Sourcepool.
+5. Player A can control, create, and edit a character that lives on the DM's Sourcepool.
+6. Player A can disconnect from the DM's Sourcepool and keep a read-only copy of the DM's Sourcepool content.
+
+Other things like configuration of what content is and isn't viewable by players can be configured, as well as offline annotations or changes (eg. a player changing things in their local copy of their character, which can then resynchronise with the DM's Sourcepool later) and more, can also happen.
+
+## Is Sourcepool in the cloud?
+
+No.
+
+This is intended as a LAN/WLAN system. 
+
+If you're tech-savvy, you can look into port-forwarding and other IP address configurations to make a Sourcepool server work on the public internet and deploy your own Sourcepool instance to the cloud - but that's all stuff you would do on your own, and is not a part of this app.
+
+As developers of Sourcepool, we are not spending any dev time or effort on cloud or internet connectivity at this stage (July 2024). Offline-first usability and LAN/WLAN connectivity are our focuses.
