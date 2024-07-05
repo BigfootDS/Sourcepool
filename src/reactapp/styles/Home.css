@@ -1,0 +1,74 @@
+#homeContent { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+}
+
+#mainMenu {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50%;
+	/* background-color: yellow; */
+	
+	margin: 5%;
+	
+	justify-content:flex-start;
+	align-items: center;
+
+	font-size: x-large;
+
+	#mainMenuButtons {
+		margin: 5%;
+
+		display: flex;
+		flex-direction: column;
+		gap: 1%;
+		width: 15%;
+		height: 100%;
+		justify-content: space-evenly;
+
+		a {
+			margin: 20px;
+		}
+		/* a {
+			background: linear-gradient(to right, black, color-mix(in srgb, var(--theme-950) 20%, transparent));
+			color: white;
+			border-radius: 25px;
+			padding: 1%;
+			min-width: 10%;
+			height: 10%;
+			min-height: 32px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+		}
+
+		a:hover {
+			background: linear-gradient(to right, var(--theme-950), color-mix(in srgb, var(--theme-950) 20%, transparent));
+		} */
+	}
+	
+}
+
+
+/* Minimum height allowed by our ElectronJS main.js file: */
+@media (max-height: 560px) {
+	#mainMenu {
+		#mainMenuButtons {
+			a {
+				padding: 2%;
+			}
+		}
+		
+	}
+}
+
+

@@ -1,0 +1,138 @@
+:root {
+	--theme-0000: #ffffff;
+	--theme-50: #e5f3ff;
+	--theme-100: #cce6ff;
+	--theme-200: #99ceff;
+	--theme-300: #66b5ff;
+	--theme-400: #339cff;
+	--theme-500: #0084ff;
+	--theme-600: #0071db;
+	--theme-700: #005fb8;
+	--theme-800: #004c94;
+	--theme-900: #003a70;
+	--theme-950: #00315e;
+	--theme-1500: #000c18;
+	--theme-9999: #000000;
+}
+
+
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+
+  transition: 0.5s;
+}
+
+body {
+	color: white;
+	background-color: var(--theme-9999);
+	height: 100dvh;
+	/* width: 100dvw; */
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+
+}
+
+
+#root {
+	width: 100%; 
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+
+	flex: 10 0 auto;
+	background-color: var(--theme-1500);
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	#menuPageWrapper {
+		width: 100%;
+		height: 100dvh;
+		
+		/* display: flex;
+		justify-content: center;
+		align-items: start; */
+		overflow-y: auto;
+	}
+
+	
+}
+
+input, select, option {
+	background-color: var(--theme-1500);
+	transition: 0.05s;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	/* color: #fff; */
+	/* background: linear-gradient(to right bottom, black, color-mix(in srgb, black 20%, transparent)); */
+	padding: 5px 20px;
+	border-radius: 5px;
+	/* box-shadow: 0 5px 0 0 var(--theme-800); */
+}
+
+input, select {
+	background: linear-gradient(to right bottom, black, color-mix(in srgb, black 20%, transparent));
+}
+
+option {
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+
+#navigatorOutOfGame {
+	
+	display: block;
+	position: absolute;
+}
+
+.page { 
+	display: flex;
+
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+
+	/* section {
+		margin: 2%;
+	} */
+}
+
+.pageBottomPadder {
+	margin-top: 10px;
+	min-height: 1px;
+}
+
+.pageTitle {
+	width: 100%;
+	top: 0;
+	/* background: linear-gradient(to right bottom, var(--theme-900), color-mix(in srgb, var(--theme-900) 20%, transparent)); */
+}
+
+.pageContent {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+	padding-bottom: 50px;
+}

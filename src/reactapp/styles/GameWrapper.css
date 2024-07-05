@@ -1,0 +1,23 @@
+#gameplayWrapper {
+	width: 100%;
+	height: 100dvh;
+	
+	/* display: flex;
+	justify-content: center;
+	align-items: start; */
+	overflow-y: auto;
+
+	#gameplayMenuBar {
+		width: 100%;
+		height: 40px;
+		background-color: aliceblue;
+		display: flex;
+		justify-content: center;
+
+		.customLink, .customButton {
+			height: 25px;
+		}
+	}
+
+	
+}

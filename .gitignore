@@ -130,8 +130,9 @@ dist
 .pnp.*
 
 
-_site/
-build/
+# Custom
 
-*.identifier
-*.Identifier
+/.webpack
+.webpack\
+.webpack/
+settings.json
