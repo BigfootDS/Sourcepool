@@ -136,3 +136,4 @@ dist
 .webpack\
 .webpack/
 settings.json
+.sandbox/
