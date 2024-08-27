@@ -1,0 +1,20 @@
+
+
+.creditsDependencies {
+	width: 100%;
+}
+
+.directDepLicenseInfo {
+	border: 1px solid lightslategray;
+	margin: 2%;
+	white-space: pre-line;
+	width: 45%;
+}
+
+
+.directDepLicenses {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,24 @@
+.customButton,
+.customLink {
+	transition: 0.05s;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #fff;
+	background: linear-gradient(to right bottom, black, color-mix(in srgb, black 20%, transparent));
+	padding: 5px 20px;
+	border-radius: 5px;
+	box-shadow: 0 5px 0 0 var(--theme-800);
+}
+
+.customButton:hover,
+.customLink:hover {
+	background: linear-gradient(to right bottom, var(--theme-900), color-mix(in srgb, var(--theme-900) 20%, transparent));
+}
+
+.customButton:active,
+.customLink:active {
+	transform: translateY(5px);
+	box-shadow: none;
+}
