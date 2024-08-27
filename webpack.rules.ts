@@ -1,7 +1,7 @@
-const path = require("node:path");
+import type { ModuleOptions } from 'webpack';
+import * as path from "node:path";
 
-
-module.exports = [
+export const rules: Required<ModuleOptions>['rules'] = [
   // Add support for native node modules
   {
     // We're specifying native_modules in the test because the asset relocator loader generates a
@@ -20,16 +20,15 @@ module.exports = [
     },
   },
   {
-    test: /\.jsx?$/,
+    test: /\.tsx?$/,
+    exclude: /(node_modules|\.webpack)/,
     use: {
-      loader: 'babel-loader',
+      loader: 'ts-loader',
       options: {
-        exclude: /node_modules/,
-        presets: ['@babel/preset-react']
-      }
-    }
+        transpileOnly: true,
+      },
+    },
   },
-  
   // Adding image file finder
   {
     test: /[\s\S]*/,
@@ -38,20 +37,4 @@ module.exports = [
     ],
     type: "asset/inline"
   },
-  // Put your webpack loader rules in this array.  This is where you would put
-  // your ts-loader configuration for instance:
-  /**
-   * Typescript Example:
-   *
-   * {
-   *   test: /\.tsx?$/,
-   *   exclude: /(node_modules|.webpack)/,
-   *   loaders: [{
-   *     loader: 'ts-loader',
-   *     options: {
-   *       transpileOnly: true
-   *     }
-   *   }]
-   * }
-   */
 ];
