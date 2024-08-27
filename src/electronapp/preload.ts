@@ -3,7 +3,7 @@
 
 import { contextBridge, ipcRenderer } from 'electron/renderer';
 import { channels } from "../shared/constants";
-import { GameSettingsKeyCatDataProps, GameSettingsKeyCatProps, MdnsStartServiceProps } from './ipc/ipcTypes';
+import { GameSettingsKeyCatDataProps, GameSettingsKeyCatProps, MdnsStartServiceProps } from '../shared/types/ipcTypes';
 
 contextBridge.exposeInMainWorld('electronAPI', {
   exitApp: () => ipcRenderer.invoke(channels.EXIT_APP),

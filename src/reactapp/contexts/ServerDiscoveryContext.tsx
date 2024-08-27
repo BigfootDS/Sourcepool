@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState, createContext } from "react";
-import { MdnsStartServiceProps } from "../../electronapp/ipc/ipcTypes";
+import { MdnsStartServiceProps } from "../../shared/types/ipcTypes";
 
 interface ServerInfo {
 	name: string,
