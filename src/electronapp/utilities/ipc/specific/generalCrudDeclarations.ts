@@ -1,5 +1,5 @@
-const { ipcMain } = require('electron');
-const { channels } = require('../../../../shared/constants');
+import { ipcMain } from 'electron';
+import { channels } from '../../../../shared/constants';
 
 /*
 		DB_CONNECT: "db_connect",

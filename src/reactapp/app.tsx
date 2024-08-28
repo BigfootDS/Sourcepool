@@ -4,22 +4,22 @@ import "./styles/index.css";
 import "./styles/customComponents.css";
 import { MemoryRouter, Routes, Route, Outlet } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Home } from "./pages/HomePage.jsx";
-import TitleBar from "./components/TitleBar.jsx";
-import SaveManager from "./components/SaveManager.jsx";
-import MenuPageWrapper from "./pages/MenuPageWrapper.jsx";
-import { Credits } from "./pages/CreditsPage.jsx";
-import { Settings } from "./pages/SettingsPage.jsx";
-import { BarePageExample } from "./pages/_barePageExample.jsx";
+import { Home } from "./pages/HomePage";
+import TitleBar from "./components/TitleBar";
+import SaveManager from "./components/SaveManager";
+import MenuPageWrapper from "./pages/MenuPageWrapper";
+import { Credits } from "./pages/CreditsPage";
+import { Settings } from "./pages/SettingsPage";
+import { BarePageExample } from "./pages/_barePageExample";
 
-import LanguageProvider from "./contexts/LanguageContext.jsx";
+import LanguageProvider from "./contexts/LanguageContext";
 
 import './utils/i18n.js';
-import CurrentUserProvider from "./contexts/CurrentUserContext.jsx";
-import LocalServerManager from "./pages/LocalServerManager.jsx";
-import ServerDiscoveryProvider from "./contexts/ServerDiscoveryContext.jsx";
-import BaseLayout from "./pages/_BaseLayout.jsx";
-import UserSelection from "./pages/UserSelection.jsx";
+import CurrentUserProvider from "./contexts/CurrentUserContext";
+import LocalServerManager from "./pages/LocalServerManager";
+import ServerDiscoveryProvider from "./contexts/ServerDiscoveryContext";
+import BaseLayout from "./pages/_BaseLayout";
+import UserSelection from "./pages/UserSelection";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

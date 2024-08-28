@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useCurrentUsername } from "../contexts/CurrentUserContext.js";
+import { useCurrentUsername } from "../contexts/CurrentUserContext";
 import { useNavigate } from "react-router-dom";
-import LocalServerManager from "./LocalServerManager.js";
+import LocalServerManager from "./LocalServerManager";
 
 
 export default function UserSelection(){

@@ -1,6 +1,6 @@
-const { ipcMain } = require('electron');
-const { channels } = require('../../../../shared/constants');
-const { hostWebsocketServer, closeWebsocketServer, sendFromServerToClient } = require('../../../networking/websocketManager.js');
+import { ipcMain } from 'electron';
+import { channels } from '../../../../shared/constants';
+import { hostWebsocketServer, closeWebsocketServer, sendFromServerToClient } from '../../../networking/websocketManager';
 
 function declareStuff(){
 	ipcMain.handle(channels.WEBSOCKET_START_SERVER, () => {

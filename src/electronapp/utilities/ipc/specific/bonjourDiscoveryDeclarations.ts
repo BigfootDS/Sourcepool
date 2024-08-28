@@ -1,7 +1,7 @@
-const { ipcMain } = require('electron');
+import { ipcMain } from 'electron';
 
-const { channels } = require('../../../../shared/constants.js');
-const { createMdnsServiceServer, getFoundServices, destroyMdnsServiceServer } = require('../../../networking/localNetworkDiscovery.js');
+import { channels } from '../../../../shared/constants.js';
+import { createMdnsServiceServer, getFoundServices, destroyMdnsServiceServer } from '../../../networking/localNetworkDiscovery';
 
 function declareStuff(){
 	ipcMain.handle(channels.MDNS_FIND_SERVICES, async () => {

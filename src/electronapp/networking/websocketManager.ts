@@ -38,7 +38,7 @@ function heartbeat() {
 }
 
 //#region Websocker server
-function hostWebsocketServer(){
+export function hostWebsocketServer(){
 	thisWebSocketServer = new WebSocketServer({ port: 7474});
 
 	thisWssHeartbeatInterval = setInterval(() => {
@@ -85,7 +85,7 @@ function hostWebsocketServer(){
 	})
 }
 
-function closeWebsocketServer(){
+export function closeWebsocketServer(){
 	thisWebSocketServer.close(() => {
 		console.log("Websocket server is now closed.");
 	});
@@ -107,7 +107,7 @@ function closeWebsocketServer(){
  * 
  * @example connectToWebsocket("192.168.0.42:7474");
  */
-function becomeClientToWebsocket(targetAddress: string){
+export function becomeClientToWebsocket(targetAddress: string){
 	thisWebSocketClient = new WebSocket("ws://" + targetAddress);
 
 	thisWebSocketClient.onopen = () => {
@@ -128,7 +128,7 @@ function becomeClientToWebsocket(targetAddress: string){
 	});
 }
 
-function disconnectClientFromServer(){
+export function disconnectClientFromServer(){
 	thisWebSocketClient.close();
 }
 
@@ -137,11 +137,11 @@ function disconnectClientFromServer(){
 
 //#region Websocket communication
 
-function sendFromClientToServer(content: string) {
+export function sendFromClientToServer(content: string) {
 	thisWebSocketClient.send(content);
 }
 
-function sendFromServerToClient(content: string) {
+export function sendFromServerToClient(content: string) {
 	thisWebSocketServer.clients.forEach(client => {
 		client.send(content);
 	})
@@ -150,8 +150,3 @@ function sendFromServerToClient(content: string) {
 //#endregion
 
 
-module.exports = {
-	hostWebsocketServer, closeWebsocketServer,
-	becomeClientToWebsocket,
-	sendFromClientToServer, sendFromServerToClient
-}

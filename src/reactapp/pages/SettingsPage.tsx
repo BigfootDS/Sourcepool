@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Settings.css";
-import CustomButton from "../components/CustomButton.js";
+import CustomButton from "../components/CustomButton";
 import * as inflection from "inflection";
 import { useTranslation } from "react-i18next";
-import { useLanguageName, useLanguageSelector } from "../contexts/LanguageContext.js";
+import { useLanguageName, useLanguageSelector } from "../contexts/LanguageContext";
 
 export function Settings () {
 	const {t} = useTranslation();

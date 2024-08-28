@@ -1,6 +1,6 @@
-const { ipcMain } = require('electron');
-const { becomeClientToWebsocket, sendFromClientToServer } = require('../../../networking/websocketManager');
-const { channels } = require('../../../../shared/constants');
+import { ipcMain } from 'electron';
+import { becomeClientToWebsocket, sendFromClientToServer } from '../../../networking/websocketManager';
+import { channels } from '../../../../shared/constants';
 
 function declareStuff(){
 	ipcMain.handle(channels.WEBSOCKET_CONNECT_TO_SERVER, (_event, targetAddress) => {
@@ -16,7 +16,7 @@ function declareStuff(){
 
 	ipcMain.handle(channels.WEBSOCKET_DISCONNECT_FROM_SERVER, async () => {
 		console.log("Disconnecting from a server now...");
-		let result = "TODO: Server Disconnect";
+		let result = {status: "TODO: Server Disconnect"};
 		return result.status;
 	});
 

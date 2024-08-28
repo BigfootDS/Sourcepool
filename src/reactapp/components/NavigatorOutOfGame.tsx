@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "./CustomButton.js";
+import CustomButton from "./CustomButton";
 import * as inflection from "inflection";
 import { useTranslation } from "react-i18next";
 

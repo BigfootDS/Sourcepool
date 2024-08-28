@@ -53,7 +53,7 @@ export default function ServerDiscoveryProvider({children}: ServerDiscoveryProvi
 
 	//#region MDNS Browser
 	// 	Clients can use the MDNS Browser to discover available servers, as long as they aren't already hosting a server.
-	const [foundServers, setFoundServers] = useState(Array<ServerInfo>);
+	const [foundServers, setFoundServers] = useState([]);
 
 	const findMdnsServices = async () => {
 		let result = await window.electronAPI.mdnsFindAllServices();

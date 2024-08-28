@@ -1,10 +1,10 @@
-const { ipcMain } = require('electron');
-const Settings = require('../../../game/SettingsManager.js');
-const { channels } = require('../../../../shared/constants.js');
-const fs = require("node:fs");
-const { default: openExplorer } = require('explorer-opener');
+import { BrowserWindow, ipcMain } from 'electron';
+import {GameSettings as Settings} from '../../../game/SettingsManager';
+import { channels } from '../../../../shared/constants.js';
+import fs from "node:fs";
+import { default as openExplorer } from 'explorer-opener';
 
-function declareStuff(mainWindow){
+function declareStuff(mainWindow: BrowserWindow){
 	ipcMain.handle(channels.EXIT_APP, () => {
 		console.log("Closing app now...");
 		mainWindow.close();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import SaveManager from "../components/SaveManager.js";
-import { useWorldDispatch, useWorldName } from "../contexts/CurrentWorldContext.js";
-import CustomButton from "../components/CustomButton.js";
+import SaveManager from "../components/SaveManager";
+import { useWorldDispatch, useWorldName } from "../contexts/CurrentWorldContext";
+import CustomButton from "../components/CustomButton";
 import { useNavigate } from "react-router-dom";
 
 export function PlayConfigPage () {

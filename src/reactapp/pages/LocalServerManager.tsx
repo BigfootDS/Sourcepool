@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useChosenServerData, useChosenServerDispatch, useFoundServersData } from "../contexts/ServerDiscoveryContext.js"
+import { useChosenServerData, useChosenServerDispatch, useFoundServersData } from "../contexts/ServerDiscoveryContext"
 
 
 export default function LocalServerManager() {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import CustomLink from "../components/CustomLink.js";
-import { useWorldDispatch, useWorldName } from "../contexts/CurrentWorldContext.js";
+import CustomLink from "../components/CustomLink";
+import { useWorldDispatch, useWorldName } from "../contexts/CurrentWorldContext";
 import "../styles/GameWrapper.css";
 
 export default function GameWrapper(){

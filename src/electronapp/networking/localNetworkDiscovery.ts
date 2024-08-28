@@ -42,7 +42,7 @@ const bonjourInstance = new Bonjour();
 let discoveryBrowser = null;
 let bonjourQueryInterval = null;
 
-async function createMdnsServiceServer(serviceName = defaultServerName, discoveryServicePort = 7475, destroyIfPreexisting = true){
+export async function createMdnsServiceServer(serviceName = defaultServerName, discoveryServicePort = 7475, destroyIfPreexisting = true){
 	if (mdnsServiceServer && destroyIfPreexisting){
 		await destroyMdnsServiceServer();
 	}
@@ -70,7 +70,7 @@ async function createMdnsServiceServer(serviceName = defaultServerName, discover
 }
 
 
-async function destroyMdnsServiceServer(){
+export async function destroyMdnsServiceServer(){
 	if (mdnsServiceUpdateInterval) {
 		clearInterval(mdnsServiceUpdateInterval);
 	}
@@ -82,7 +82,7 @@ async function destroyMdnsServiceServer(){
 
 
 
-function getFoundServices() {
+export function getFoundServices() {
 
 	foundServers = [];
 	
@@ -105,9 +105,3 @@ function getFoundServices() {
 	return foundServers;
 }
 
-
-
-module.exports = {
-	createMdnsServiceServer, destroyMdnsServiceServer,
-	getFoundServices
-}

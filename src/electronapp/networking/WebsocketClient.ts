@@ -1,5 +1,5 @@
 import { WebSocket } from "ws";
-import Settings from "../game/SettingsManager.js";
+import { GameSettings as Settings } from "../game/SettingsManager";
 
 class WebsocketClient {
 

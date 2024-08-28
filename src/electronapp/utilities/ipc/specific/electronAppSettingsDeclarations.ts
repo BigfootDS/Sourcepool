@@ -1,20 +1,20 @@
-const { ipcMain, dialog } = require('electron');
-const { channels } = require('../../../../shared/constants.js');
-const Settings = require('../../../game/SettingsManager.js');
+import { ipcMain, dialog, BrowserWindow } from 'electron';
+import { channels } from '../../../../shared/constants.js';
+import { GameSettings as Settings } from '../../../game/SettingsManager';
 
-function declareStuff(mainWindow){
+function declareStuff(mainWindow: BrowserWindow){
 	ipcMain.handle(channels.GET_FOLDER_WORLDSAVEROOT, async () => {
 		console.log("Showing dialog to choose a folder now...");
-		let { cancelled, filePaths } = await dialog.showOpenDialog(mainWindow, {
+		let { filePaths } = await dialog.showOpenDialog(mainWindow, {
 			properties: ['openDirectory']
 		});
 
-		console.log({ cancelled, filePaths });
+		console.log({ filePaths });
 		if (filePaths[0]) {
-			Settings.Storage.saveDataLocation = filePaths[0];
+			Settings.Storage.serversRootDirectory = filePaths[0];
 			return filePaths[0];
 		} else {
-			return Settings.Storage.saveDataLocation
+			return Settings.Storage.serversRootDirectory
 		}
 	});
 
