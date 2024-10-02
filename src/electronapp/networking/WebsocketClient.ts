@@ -1,5 +1,8 @@
 import { WebSocket } from "ws";
-import { GameSettings as Settings } from "../game/SettingsManager";
+import { SuperCamoManager } from "../database/SuperCamoManager";
+import { AppSettingsData } from "../database/models/AppSettingsModel";
+
+
 
 class WebsocketClient {
 
@@ -12,11 +15,13 @@ class WebsocketClient {
 	 */
 	static client: null|WebSocket = null;
 
-	static connect(serverAddress: string) {
+	static async connect(serverAddress: string) {
 
 		// Is the local user signed in properly?
 		// There should be a username to pass along.
-		if (!Settings.General.username) {
+		let currentSettings: AppSettingsData = await SuperCamoManager.settingsData as AppSettingsData;
+		let currentUser = SuperCamoManager.localAppData.findOneDocument("Users", {_id: currentSettings.currentUser})
+		if (!currentUser) {
 			throw new Error("Local app user is not signed in, a server connection without a user identifier like that will not be useful.");
 		}
 
