@@ -189,7 +189,7 @@ jobs:
 
 
   make_release:
-    needs: [draft_release, build_windows, build_macos]
+    needs: [draft_release, build_windows]
     name: Publish the Draft Release
     runs-on: ubuntu-latest
     steps:
