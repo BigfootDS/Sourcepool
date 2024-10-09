@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo The release data is now being sent to Discord...
+        echo The release data is now being sent to Discord...${{env.DISCORD_WEBHOOK}}
 
     - name: Get Latest Release
       id: latestrelease
