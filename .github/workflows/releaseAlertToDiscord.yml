@@ -34,5 +34,5 @@ jobs:
       with:
         webhook-url: ${{ secrets.DISCORD_WEBHOOK_SOURCEPOOL }}
         content: |
-          An update to Sourcepool Server has been released! Please view it here: 
-          https://github.com/BigfootDS/Sourcepool-Server/releases/tag/${{ steps.latestrelease.outputs.release}}
+          An update to Sourcepool has been released! Please view it here: 
+          https://github.com/BigfootDS/Sourcepool/releases/tag/${{ steps.latestrelease.outputs.release}}
