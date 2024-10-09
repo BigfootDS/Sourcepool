@@ -13,6 +13,9 @@ on:
     workflows: ["Build & Release on PR Merge"]
     types: [completed]
 
+env: 
+  DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_SOURCEPOOL }}
+
 jobs:
   push_to_discord:
     name: Send release to Discord
@@ -31,7 +34,7 @@ jobs:
     - name: Discord Webhook Action
       uses: tsickert/discord-webhook@v5.3.0
       with:
-        webhook-url: ${{ secrets.DISCORD_WEBHOOK_SOURCEPOOL }}
+        webhook-url: ${{ env.DISCORD_WEBHOOK }}
         content: |
           An update to Sourcepool Server has been released! Please view it here: 
           https://github.com/BigfootDS/Sourcepool-Server/releases/tag/${{ steps.latestrelease.outputs.release}}
