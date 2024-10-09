@@ -82,10 +82,10 @@ jobs:
         run: ls out/make -R
 
       - name: Put build into ZIP
-        run: Compress-Archive -Path out/make/squirrel.windows/x64/*.exe Sourcepool-Server-Windows-${{ needs.draft_release.outputs.release_version }}.zip
+        run: Compress-Archive -Path out/make/*.exe Sourcepool-Server-Windows-${{ needs.draft_release.outputs.release_version }}.zip
 
       - name: Rename EXE to standard
-        run: Rename-Item out/make/squirrel.windows/x64/*.exe Sourcepool-Server-Windows-${{ needs.draft_release.outputs.release_version }}.exe
+        run: Rename-Item out/make/*.exe Sourcepool-Server-Windows-${{ needs.draft_release.outputs.release_version }}.exe
 
       - name: Upload Build to Release
         uses: softprops/action-gh-release@v1
@@ -98,51 +98,51 @@ jobs:
   
 
 
-  build_macos:
-    needs: [draft_release]
-    name: Build on MacOS
-    runs-on: macos-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.draft_release.outputs.semver_commit_hash }}
+  # build_macos:
+  #   needs: [draft_release]
+  #   name: Build on MacOS
+  #   runs-on: macos-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #       with:
+  #         ref: ${{ needs.draft_release.outputs.semver_commit_hash }}
       
-        # macOS: appears to fix https://github.com/electron/forge/issues/2807
-      - name: Setup Python 3.11 (macOS)
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+  #       # macOS: appears to fix https://github.com/electron/forge/issues/2807
+  #     - name: Setup Python 3.11 (macOS)
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.11'
       
-      - name: Set up NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
+  #     - name: Set up NodeJS
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: lts/*
 
-      - name: Install node-gyp
-        run: npm install -g node-gyp
+  #     - name: Install node-gyp
+  #       run: npm install -g node-gyp
 
-      - name: Install appdmg package
-        run: npm install -g appdmg
+  #     - name: Install appdmg package
+  #       run: npm install -g appdmg
       
-      - name: Install dependencies
-        run: npm install
+  #     - name: Install dependencies
+  #       run: npm install
 
-      - name: Build app
-        run: npm run make
+  #     - name: Build app
+  #       run: npm run make
 
-      - name: Log the build output
-        run: ls out/make
+  #     - name: Log the build output
+  #       run: ls out/make
 
-      - name: Put build into ZIP
-        run: zip -j Sourcepool-Server-MacOS-${{ needs.draft_release.outputs.release_version }}.zip out/make/*.dmg
+  #     - name: Put build into ZIP
+  #       run: zip -j Sourcepool-Server-MacOS-${{ needs.draft_release.outputs.release_version }}.zip out/make/*.dmg
 
-      - name: Upload Build to Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: Sourcepool-Server-MacOS-${{ needs.draft_release.outputs.release_version }}.zip
-          tag_name: ${{ needs.draft_release.outputs.release_version }}
-          draft: true
+  #     - name: Upload Build to Release
+  #       uses: softprops/action-gh-release@v1
+  #       with:
+  #         files: Sourcepool-Server-MacOS-${{ needs.draft_release.outputs.release_version }}.zip
+  #         tag_name: ${{ needs.draft_release.outputs.release_version }}
+  #         draft: true
           
   # build_ubuntu:
   #   needs: [draft_release]
