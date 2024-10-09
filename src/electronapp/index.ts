@@ -1,5 +1,5 @@
 import { app, BrowserWindow, Menu, nativeImage } from 'electron';
-import { GameSettings } from './game/SettingsManager';
+// import { GameSettings } from './game/SettingsManager';
 import {ipcDeclarations} from "./utilities/ipc/ipcDeclarationsAll";
 import { channels } from '../shared/constants.js';
 import path from "node:path";
@@ -111,15 +111,18 @@ app.whenReady().then(async () => {
     // ...just depends on how this looks in the UX.
   } 
 
-  if (GameSettings.Video.windowMode === 0){
-    console.log("Startup check: fullscreen is false");
-    mainWindow.setFullScreen(false);
-    mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 0);
-  } else {
-    console.log("Startup check: fullscreen is true");
-    mainWindow.setFullScreen(true);
-    mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 1);
-  }
+  // TODO: New app settings based on SuperCamo database
+  mainWindow.setFullScreen(false);
+  mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 0);
+  // if (GameSettings.Video.windowMode === 0){
+  //   console.log("Startup check: fullscreen is false");
+  //   mainWindow.setFullScreen(false);
+  //   mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 0);
+  // } else {
+  //   console.log("Startup check: fullscreen is true");
+  //   mainWindow.setFullScreen(true);
+  //   mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 1);
+  // }
 
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.

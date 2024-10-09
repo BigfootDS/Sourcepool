@@ -1,5 +1,5 @@
 import { BrowserWindow, ipcMain } from 'electron';
-import {GameSettings as Settings} from '../../../game/SettingsManager';
+// import {GameSettings as Settings} from '../../../game/SettingsManager';
 import { channels } from '../../../../shared/constants.js';
 import fs from "node:fs";
 import { default as openExplorer } from 'explorer-opener';
@@ -24,14 +24,14 @@ function declareStuff(mainWindow: BrowserWindow){
 		console.log("Entering fullscreen now...");
 		mainWindow.setFullScreen(true);
 		mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 1);
-		Settings.Video.windowMode = 1;
+		// Settings.Video.windowMode = 1;
 	});
 
 	ipcMain.handle(channels.FULLSCREEN_DISABLE, () => {
 		console.log("Exiting fullscreen now...");
 		mainWindow.setFullScreen(false);
 		mainWindow.webContents.send(channels.FULLSCREEN_STATUS, 0);
-		Settings.Video.windowMode = 0;
+		// Settings.Video.windowMode = 0;
 	});
 
 	ipcMain.handle(channels.FILEEXPLORER_OPEN_TO_PATH, (_event, value) => {
