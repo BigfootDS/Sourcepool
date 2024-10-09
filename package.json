@@ -1,7 +1,7 @@
 {
   "name": "@bigfootds/sourcepool",
   "productName": "Sourcepool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A self-hosted content manager for TTRPG games.",
   "main": ".webpack/main",
   "scripts": {
